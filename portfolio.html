@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kennydesign: Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://use.typekit.net/tln4plm.css">
+</head>
+<header>
+    <nav>
+        <a href="index.html" class="logo">Insert Logo Here</a>
+        <ul class="nav-links">
+            <a href="#">Get In Touch!</a>
+            <a href="#">About Me</a>
+            <a href="portfolio.html">Portfolio</a>
+        </ul>
+    </nav>
+</header>
+<body>
+    <div class="container">
+        <div class="heading2"><h1>Recent.</h1><span class="arrow"></span></div>
+        <div class="paragraph2"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p></div>
+    </div>
+    <div class="container">
+        <div class="container-content">
+            <!-- <div class="paragraph2"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p></div> -->
+            <img src="img/pt.png" alt="pt1">
+            <img src="img/pt.png" alt="pt1">
+        </div>
+    </div>
+    <div class="container bg-blue">
+        <div class="heading2"><h1>2023.</h1><span class="arrow"></span></div>
+    </div>
+    <div class="container bg-blue">
+        <div class="container-content">
+            <img src="img/pt.png" alt="pt1">
+            <div class="paragraph2"><p>Explore....</p></div>
+        </div>
+    </div>
+
+    <script>
+        const arrows = document.querySelectorAll('.arrow');
+
+        function handleScroll() {
+            arrows.forEach(arrow => {
+                if (window.scrollY > 100) {
+                    arrow.parentElement.classList.add('stretch'); // Add the stretch animation class to the parent div
+                } else {
+                    arrow.parentElement.classList.remove('stretch'); // Remove the stretch animation class from the parent div
+                }
+            });
+        }
+
+        window.addEventListener('scroll', handleScroll);
+    </script>
+</body>
+</html>

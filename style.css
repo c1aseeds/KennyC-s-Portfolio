@@ -1,0 +1,156 @@
+:root{
+  --brown: #43291C;
+  --darkbrown: #211515;
+  --lightbrown: #BBA08B;
+  --pastelbrown: #9C8E83;
+}
+
+*{
+  box-sizing: border-box;
+
+}
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+  body {
+    background-color: #43291C; /* Set body background color */
+    margin: 0; /* Remove default margin */
+    font-family: "neulis-neue", sans-serif;
+    /* overflow: hidden; */
+  }
+  
+  nav {
+    background-color: #211515; /* Set navigation bar background color */
+    width: 100%;
+    padding-bottom: 2px; /* Add extra padding at the bottom */
+    position: fixed; /* Stick the navigation bar to the top */
+    top: 0; /* Position it at the top */
+    z-index: 1000; /* Ensure it's above other content */
+    padding: 0 5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: flex;
+  }
+  
+  nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 17px 16px; /* Increase the padding for top and bottom */
+    text-decoration: none;
+    position: relative; /* Set position to relative for pseudo-element */
+    transition: all 300ms;
+  }
+
+
+nav a:hover.portfolio::after,
+nav a:hover.about::after,
+nav a:hover.touch::after {
+  opacity: 1; /* Show the arrow only for specific links */
+}
+
+nav a:hover.logo::after{
+  opacity: 0;
+}
+
+  nav a:hover::after {
+    content: ""; /* Create the pseudo-element */
+    display: block;
+    position: absolute;
+    bottom: 0; /* Align at the bottom of the link */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px; /* Adjust arrow width */
+    height: 10px; /* Adjust arrow height */
+    background-color: #fff; /* Arrow color */
+    border-radius: 50%; /* Make the arrow rounded */
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* Create a triangular shape */
+
+  }
+
+  
+
+  /* Styles for headline-text */
+
+  .headline-text {
+    text-align: center; /* Center-align the content */
+    height: 100vh; /* Make the container take the full viewport height */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+  }
+
+
+.headline-text {
+  text-align: center; /* Center-align the content */
+}
+
+.headline-text h1 {
+  color: #BBA08B; /* Set h1 color to #BBA08B */
+  margin-bottom: 1px;
+}
+
+.headline-text p {
+  color: #9C8E83; /* Set p color to #9C8E83 */
+}
+
+/* Styles for the button */
+.headline-text button {
+  padding: 10px 50px; /* Increase padding for larger width and height */
+  font-size: 14px; /* Increase font size */
+  background-color: #9E744A; /* Set button background color */
+  color: white; /* Set button text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add border radius */
+  cursor: pointer; /* Add cursor pointer on hover */
+  transition: background-color 0.3s ease; /* Add transition effect */
+  font-family: "neulis-neue", sans-serif;
+}
+
+.headline-text button:hover {
+  background-color: #BBA08B; /* Change background color on hover */
+}
+
+.container {
+  background-color: var(--darkbrown);
+  height: 100svh;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  padding: 5rem;
+  display: grid;
+  align-content: center;
+}
+
+.heading2{
+  color: var(--lightbrown);
+  font-size: xx-large;
+}
+
+.paragraph2{
+  padding: 0rem 3em 0rem 1.5rem;
+  color: var(--pastelbrown);
+}
+
+.contact{
+  color: var(--pastelbrown);
+  padding: 0rem 3em 0rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+
+}
+
+.contact-info{
+  display: grid;
+}
+
+
+
