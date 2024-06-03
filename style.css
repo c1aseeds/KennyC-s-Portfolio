@@ -138,6 +138,7 @@ nav a:hover.logo::after{
 .paragraph2{
   padding: 0rem 3em 0rem 1.5rem;
   color: var(--pastelbrown);
+  line-height: 1.5;
 }
 
 .contact{
